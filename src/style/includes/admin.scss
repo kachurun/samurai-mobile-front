@@ -1,0 +1,70 @@
+section.admin {
+    .content {
+        padding: 25px;
+        max-width: 740px;
+
+        .form-data {
+            background-color: white;
+            width: 100%;
+            padding: 25px 25px 1px;
+
+            a.add {
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            .form-group .form-field {
+                vertical-align: bottom;
+                margin-right: 15px;
+            }
+
+            .form-field {
+                &.main {
+                    text-align: center;
+                    width: 80px;
+                    padding-top: 10px;
+                    margin: 0 10px 5px 10px;
+                }
+                &.street {
+                    width: 235px;
+                }
+                &.house {
+                    width: 70px;
+                }
+                &.office {
+                    width: 170px;
+                }
+
+                &.born-d {
+                    width: 50px;
+                }
+                &.born-m {
+                    width: 280px;
+                }
+                &.born-y {
+                    width: 85px;
+                }
+            }
+
+            input[type="submit"],
+            .btn,
+            button {
+                margin: 10px 0 40px;
+            }
+        }
+    }
+}
+
+
+
+
+&.theme-2 {
+    section.admin {
+        .second-menu {
+            background-color: #fffbf5;
+
+            ul li.active a {
+                color: #ed1c24;;
+            }
+        }
+    }
+}

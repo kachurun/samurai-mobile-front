@@ -1,0 +1,123 @@
+.spacedSelect {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.spacedSelect .select {
+	width: 100%;
+    height: 32px;
+    padding: 0 45px 0 10px;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #30343b;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.spacedSelect .select:hover {
+	background-color: #FBFBFB;
+}
+
+.spacedSelect .select:active {
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.spacedSelect.focused .select {
+	border: 1px solid #C7C7C7;
+}
+
+.spacedSelect .select .text {
+	display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    line-height: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.spacedSelect .trigger {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 32px;
+	height: 100%;
+}
+.spacedSelect .trigger .arrow {
+	position: absolute;
+	top: 14px;
+	right: 12px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid #000;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	opacity: 0.7;
+	filter: alpha(opacity=80);
+}
+.spacedSelect:hover .arrow {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.spacedSelect .dropdown {
+	top: 33px;
+	width: 100%;
+	min-height: 200px;
+	max-height: 100%;
+	margin: 0;
+	font-size: 14px;
+
+	border-radius: 4px;
+	background: transparent !important;
+	border: 0;
+	box-shadow: none;
+	overflow:auto; overflow-y:auto;
+}
+
+.spacedSelect .dropdown ul {
+	list-style: none;
+	width: 100%;
+	background: #FFF;
+	border-radius: 4px;
+	padding: 4px 0;
+	box-shadow: 0 3px 3px 0 rgba(57, 68, 71, 0.12);
+	border: 1px solid #e5e5e5;
+}
+
+
+.spacedSelect ul li, .spacedSelect ul li ul li {
+    position: relative;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 32px;
+}
+/*
+.spacedSelect li.selected {
+	background: #A3ABB1;
+	color: #FFF;
+}
+*/
+.spacedSelect li:hover {
+	background: #F0F0F0;
+}
+.spacedSelect li.disabled {
+	color: #AAA;
+}
+.spacedSelect li.disabled:hover {
+	background: none;
+}
+.spacedSelect li ul {
+    display: none;
+    position: absolute;
+    left:100%;
+    top:0;
+    z-index: 10000;
+}
+.spacedSelect li ul li {
+    white-space: nowrap;
+}
+.spacedSelect li:hover ul {
+    display: block;
+}

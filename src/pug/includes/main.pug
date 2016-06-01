@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+        block title
+            title "Hello world"
+        block head_scripts
+            script(src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous")
+            script(src="https://cdn.polyfill.io/v2/polyfill.min.js")
+            script(src="/vendor/lightslider/lightslider.min.js")
+            script(src="/vendor/inputmask/jquery.inputmask.bundle.min.js")
+            script(src="/vendor/select/jquery.select.js")
+            script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tLQgsvD7KrdP_c9-ZEy64mqe1Us8Zd6J&width=600&height=260&lang=ru_RU&sourceType=constructor&id=yamap")
+        block head_styles
+            link(rel="stylesheet" type="text/css" href="/css/style.css")
+            link(rel="stylesheet" type="text/css" href="/vendor/lightslider/lightslider.min.css")
+            link(rel="stylesheet" type="text/css" href="/vendor/select/select.css")
+    body
+        block header
+            include ./header.pug
+
+        block content
+
+        block footer
+            include ./footer.pug
+        
+        block modal
+            include ./modal.pug
+            
+        block menu
+            include ./side_menu.pug
+        

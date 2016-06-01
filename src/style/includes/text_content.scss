@@ -1,0 +1,30 @@
+section.text-content {
+    min-height: 50vh;
+    .content {
+        padding: 25px 25px 0;
+        max-width: 984px;
+
+        .cc {
+            margin-bottom: 0;
+        }
+
+        ul.list {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        ul.dc {
+            li {
+                margin-bottom: 20px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .stock-item {
+        margin-bottom: 25px;
+    }
+}

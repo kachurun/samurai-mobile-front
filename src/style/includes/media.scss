@@ -1,0 +1,277 @@
+// мобильные девайсы
+@media screen and (max-width: 570px) {
+    body {
+        min-width: 300px;
+        max-width: 100vw;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+    .f-table    {
+        font-size: 14px;
+    }
+    .f-thead    {
+        .f-th {
+            font-size: 12px;
+        }
+    }
+
+    .second-menu {
+        &:after {
+            width: 100px !important;
+        }
+        ul {
+            padding: 15px 0 !important;
+            li {
+                font-size: 16px;
+                margin: 0 5px 0 15px !important;
+            }
+        }
+    }
+
+    header {
+        .wrapper {
+            text-align: center;
+        }
+
+        .logo {
+            padding: 0;
+        }
+        .text {
+            width: 100%;
+            text-align: center;
+            margin: 15px 0;
+        }
+        .buttons-holder {
+            width: 100%;
+            text-align: center;
+            float: none;
+
+            .phone {
+                margin-right: 0;
+            }
+
+            .buttons {
+                padding: 5px;
+                border-radius: 26px;
+            }
+        }
+
+        .top-menu {
+            ul li {
+                width: 33.333333%;
+            }
+        }
+
+        .nav-panel {
+            .section-name {
+                font-size: 18px;
+            }
+        }
+    }
+
+    section.start-page {
+        .set-group {
+            margin: 0 20px;
+            .set-item {
+                margin: 10px 0;
+                width: 100% !important;
+                max-width: none !important;
+
+                .img-wrap {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .stocks {
+            .stocks-list {
+                .stock-item {
+                    max-width: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    section.range {
+        .set-group {
+            margin: 0 20px;
+
+            .set-item {
+                margin: 10px 0 35px;
+                width: 100% !important;
+                max-width: none !important;
+
+                .img-wrap {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .desc-wrap {
+                    .nutrition {
+                        font-size: 14px;
+
+                        button.show-more {
+                            top: 4px;
+                            right: 0;
+                        }
+                    }
+                }
+
+                button.to-cart {
+                    width: auto;
+                    font-size: 16px;
+                    padding: 12px 20px;
+                }
+            }
+        }
+        .stocks {
+            .stocks-list {
+                .stock-item {
+                    max-width: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    section.flamp {
+        .flamp-wrap {
+            .items {
+                .item {
+                    margin-bottom: 35px;
+                    .img-wrap,
+                    .text {
+                        display: block;
+                    }
+
+                    .img-wrap {
+                        width: 68px;
+                        margin: 0 auto 5px;
+
+                        .rating {
+                            right: 0;
+                            width: 100%;
+                        }
+                    }
+                    .text {
+                        padding: 0;
+                        .name {
+                            text-align: center;
+                            margin-bottom: 7px;
+                        }
+                        .crone {
+                            display: none;
+                        }
+                        .desc {
+                            a {
+                                display: block;
+                                text-align: center;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.zakaz {
+        .order-list {
+            .order-item {
+
+                .img-wrap {
+                    float: none;
+                    width: 100%;
+
+                    .price {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+
+                .desc {
+                    display: block;
+                    padding-bottom: 80px;
+
+                    .size {
+                        height: 60px;
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+
+        .form-data {
+            .form-field, .radio {
+                width: 100% !important;
+            }
+
+            .radio {
+                padding-left: 50px;
+                margin: 0;
+                &:after {
+                    width: 35px;
+                    height: 35px;
+                    margin-top: -20px;
+                }
+
+                &:before {
+                    margin-top: -16px;
+                    left: 4px;
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+        }
+    }
+
+    section.lunch {
+        .kind-select {
+            .item {
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .consist-select {
+            .item {
+                display: block;
+                .img-wrap {
+                    width: 100%;
+                    float: none;
+                }
+
+                .desc {
+                    padding: 10px 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding-top: 175px;
+        background-position: center 20px;
+
+        .about {
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+    // модалки
+    .modal-overlay {
+        .modal {
+            .modal-content {
+                padding: 25px !important;
+                border-radius: 0;
+            }
+        }
+    }
+}

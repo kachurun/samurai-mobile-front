@@ -1,0 +1,44 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.admin
+		nav.second-menu
+			ul
+				-var group = ["История заказов", "Личные данные", "Бонусная карта"];
+				for name, index in group
+					li(class=(index == 0) ? "active" : "")
+						a(href='#')= name
+
+		.container
+			.content
+
+				.f-table
+					.f-thead
+						.f-th Дата и время заказа
+						.f-th Сумма, руб
+						.f-th Бонусов за заказ
+						.f-th Статус
+					.f-tr
+						.f-td 
+							a.link(href="") 25 марта 2016
+						.f-td 1870
+						.f-td 185
+						.f-td Доставлен
+					.f-tr
+						.f-td 
+							a.link(href="") 30 марта 2016
+						.f-td 1210
+						.f-td 135
+						.f-td Доставлен
+					.f-tr
+						.f-td 
+							a.link(href="") 5 мая 2016
+						.f-td 780
+						.f-td 76
+						.f-td Доставлен

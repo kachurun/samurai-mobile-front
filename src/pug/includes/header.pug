@@ -1,0 +1,27 @@
+header
+    div.wrapper
+        div.logo
+        div.text 
+            p 
+                | Быстрая доставка роллов, <br> 
+                | суши и пиццы в Екатеринбурге
+        div.buttons-holder
+            span.phone
+                small.code (343) 
+                | 237-222-7
+            ul.buttons
+                li
+                    a.phone(href='#' data-modal="callback")
+                li
+                    a.address(href='#' data-modal="address")
+                li
+                    a.bucket(href='#')
+    nav.top-menu
+        ul
+            -var menus = ["sushi", "wok", "pizza", "burger", "drink", "snack"];
+            for name in menus
+                li(class=name) 
+                    a(href='#')
+    div.nav-panel
+        div.burger-menu
+        div.section-name Заголовок страницы

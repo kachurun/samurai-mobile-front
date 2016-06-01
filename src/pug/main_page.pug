@@ -1,0 +1,68 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.range
+		nav.second-menu
+			ul
+				-var group = ["Хиты продаж", "Сеты", "Филадельфия", "Жареные", "С угрем", "Горячие"];
+				for name, index in group
+					li(class=(index == 0) ? "active" : "")
+						a(href='#')= name
+		
+		.container
+			.groups
+				.set-group
+					each i in [1,2]
+						.set-item
+							.img-wrap
+								img(src="/img/set_item" + i + ".png", alt="Сеты")
+								span.price 420 р.
+							.desc-wrap
+								.title Филадельфия для девушек (с соусом)
+								.nutrition
+									.nutr-bar
+										span.item 8/27
+										span.item 9/32
+										span.item 22/75
+										span.item 202/687
+									button.show-more
+									.more
+										| Какая то доп.информация, которой не нарисовано в дизайне, но она явно нужна
+								.desc
+									| Нежный ролл из 14 миниатюрных
+									| штучек со сливочным сыром,
+									| обернутый в свежий лосось, по
+									| желанию поливается специальным
+									| фирменным соусом. (340 гр.)
+							button.to-cart Добавить в заказ
+							
+				.set-group
+					each i in [4,2]
+						.set-item
+							.img-wrap
+								img(src="/img/set_item" + i + ".png", alt="Сеты")
+								span.price 420 р.
+							.desc-wrap
+								.title Филадельфия для девушек (с соусом)
+								.nutrition
+									.nutr-bar
+										span.item 8/27
+										span.item 9/32
+										span.item 22/75
+										span.item 202/687
+									button.show-more
+									.more
+										| Какая то доп.информация, которой не нарисовано в дизайне, но она явно нужна
+								.desc
+									| Нежный ролл из 14 миниатюрных
+									| штучек со сливочным сыром,
+									| обернутый в свежий лосось, по
+									| желанию поливается специальным
+									| фирменным соусом. (340 гр.)
+							button.to-cart Добавить в заказ

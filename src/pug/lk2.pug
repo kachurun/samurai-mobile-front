@@ -1,0 +1,94 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.admin
+		nav.second-menu
+			ul
+				-var group = ["История заказов", "Личные данные", "Бонусная карта"];
+				for name, index in group
+					li(class=(index == 1) ? "active" : "")
+						a(href='#')= name
+
+		.container
+			.content
+				.form-data
+					form.address(action="")
+						.form-group
+							h5 Адреса доставки
+							label Основной
+							.form-field.main
+								input(type="radio" checked="checked" name="address1" id="address1" value="0")
+								label.radio(for="address1") 
+							.form-field.street
+								label
+									| Улица:
+									input(type="text" name="street")
+							.form-field.house
+								label
+									| № дома:
+									input(type="text" name="house")
+							.form-field.office
+								label
+									| № квартиры/офиса:
+									input(type="text" name="office")
+						a.link.add(href="#add") Добавить адрес +
+						
+						input(type="submit" value="Сохранить")
+							
+							
+					form.data(action="")
+						h5 Данные пользователя
+						.form-field.phone
+							label
+								| Выш мобильный телефон *:
+								input.mask-phone(type="text" name="phone")
+								
+						.form-field.name
+							label
+								| Имя:
+								input(type="text" name="name")
+								
+						.form-group
+							label Дата рождения:
+							.form-field.born-d
+								input.number(type="text" name="day" value="01")
+									
+							.form-field.born-m
+								select(name="month")
+									option(value="1" selected="selected") Января
+									option(value="2") Февраля
+									option(value="3") Марта
+									option(value="4") Апреля
+									option(value="5") Мая
+									option(value="6") Июня
+									option(value="7") Июля
+									option(value="8") Августа
+									option(value="9") Сентября
+									option(value="10") Октября
+									option(value="11") Ноября
+									option(value="12") Декабря
+								
+							.form-field.born-y
+								input(type="text" name="year" value="1970")
+
+						input(type="submit" value="Сохранить")
+								
+					form.pass(action="")
+						h5 Сменить пароль
+						.form-field.old-password
+							label
+								| Текущий пароль:
+								input(type="password" name="old_password")
+								
+						.form-field.new-password
+							label
+								| Новый пароль:
+								input(type="password" name="new_password")
+								
+						input(type="submit" value="Сохранить")

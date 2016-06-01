@@ -1,0 +1,87 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.start-page
+		.container
+			ul#mainpage-slider.cs-hidden
+				li
+					img(src="/img/banner1.jpg")
+				li
+					img(src="/img/banner2.jpg")
+			.groups
+				.set-group
+					a.set-item(href="#")
+						.img-wrap
+							img(src="/img/set_item1.png", alt="Сеты")
+						.desc-wrap
+							span.title Сеты
+					a.set-item(href="#")
+						.img-wrap
+							img(src="/img/set_item2.png", alt="Филадельфия от 180руб")
+						.desc-wrap
+							span.title Филадельфия от 180руб
+							
+				.set-group.items3
+					a.set-item(href="#")
+						.img-wrap
+							img(src="/img/set_item3.png", alt="Горячие блюда")
+						.desc-wrap
+							span.title Горячие блюда
+					a.set-item(href="#")
+						.img-wrap
+							img(src="/img/set_item4.png", alt="21 вид пиццы")
+						.desc-wrap
+							span.title 21 вид пиццы
+					a.set-item(href="#")
+						.img-wrap
+							img(src="/img/set_item1.png", alt="21 вид пиццы")
+						.desc-wrap
+							span.title Можно засунуть 3
+				
+			.stocks
+				h1 Действующие акции
+				.stocks-list
+					.stock-item
+						.img-wrap
+							img(src="/img/stock1.png", alt="")
+						.text-wrap
+							span
+								| Дарим всем клиентам карты
+								u со скидкой в 10% <br>
+								| Больше роллов за бонусы!
+					.stock-item
+						.img-wrap
+							img(src="/img/stock2.png", alt="")
+						.text-wrap
+							span
+								u Счастливые часы
+								| Мы дарим вам целуюю порцию роллов на каждые
+								| 350 рублей в сумме заказа.
+					.stock-item
+						.img-wrap
+							img(src="/img/stock3.png", alt="")
+						.text-wrap
+							span
+								u Оставь отзыв
+								| на Флапм.ру - получи 200 бонусов на счет
+								| в Сытом самурае!
+			.about.content
+				h1 Доставка роллов, пиццы и японской кухни в Екатеринбурге
+				p
+					| Сытый самурай — это доставка роллов и пиццы в Екатеринбурге. Каждый день
+					| мы готовим вкусные блюда с большими порциями, наши вежливые и
+					| пунктуальные курьеры доставляют их в ваши дома и офисы. Выбирайте:
+					| доставка роллов, роллы Филадельфия, доставка пиццы.
+				p
+					| Качество и безопасность блюд — наши основные принципы, которые остаются
+					| неизменными с 2009 года.
+				p
+					| Каждый день мы улучшаем нашу службу доставки, вы можете в этом помочь. <br>
+					| Оставьте свой отзыв на Горячую линию качества по телефону или электронной
+					| почте. Мы учтем все пожелания наших клиентов.

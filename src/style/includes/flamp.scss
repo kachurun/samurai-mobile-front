@@ -1,0 +1,136 @@
+section.flamp {
+
+    .flamp-wrap {
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 15px 25px 40px;
+
+        .title {
+            border-bottom: 1px solid $main_color;
+            color: $main_color;
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+
+            .rating {
+                float: right;
+                text-align: right;
+                padding-left: 70px;
+                position: relative;
+                top: 4px;
+            }
+        }
+
+        .items {
+            margin-bottom: 30px;
+            .item {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .img-wrap, .text {
+                    display: table-cell;
+                    vertical-align: top;
+                }
+
+                .img-wrap {
+                    .avatar {
+                        background-color: #e5e3e4;
+                        padding: 4px;
+                        position: relative;
+                        width: 68px;
+                        height: 88px;
+                    }
+
+                    img {
+                        margin: 0;
+                        width: 60px;
+                        height: 60px;
+                        border: 1px solid white;
+                    }
+                    .rating {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        height: 20px;
+
+                        background-color: white;
+                    }
+                }
+
+                .text {
+                    padding-left: 20px;
+
+                    .name {
+                        font-size: 27px;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+
+                        .crone {
+                            background-image: url('/img/crone.png');
+                            background-repeat: no-repeat;
+
+                            line-height: 28px;
+                            padding-left: 38px;
+                            color: #faa81e;
+                            font-size: 36px;
+                            font-weight: 500;
+                            float: right;
+                            font-family: 'Georgia', serif;
+                        }
+                    }
+                }
+            }
+        }
+
+        .more {
+            border-bottom: 1px solid $main_color;
+            color: $main_color;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                background: white;
+                position: relative;
+                top: 10px;
+                line-height: 20px;
+                font-size: 18px;
+                font-weight: 300;
+                font-style: italic;
+                text-decoration: underline;
+                padding: 0 5px;
+            }
+        }
+
+        .rating {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 64px;
+            height: 14px;
+            line-height: 14px;
+            background-repeat: no-repeat;
+            background-position: left;
+
+            &.star1 {
+                background-image: url('/img/star1.png');
+            }
+            &.star2 {
+                background-image: url('/img/star2.png');
+
+            }
+            &.star3 {
+                background-image: url('/img/star3.png');
+
+            }
+            &.star4 {
+                background-image: url('/img/star4.png');
+
+            }
+            &.star5 {
+                background-image: url('/img/star5.png');
+            }
+        }
+    }
+}

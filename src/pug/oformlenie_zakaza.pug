@@ -1,0 +1,98 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.zakaz
+		.container
+			form(action="")
+				.order-list
+					.order-item
+						.remove-item
+						.img-wrap
+							img(src="/img/set_item4.png", alt="")
+							span.price 420 р.
+						.desc
+							.name Филадельфия для девушек (с соусом)
+							.size
+								.minus
+								input.number(type="text" value="1" name="amount[0]")
+								.plus
+					.order-item
+						.remove-item
+						.img-wrap
+							img(src="/img/set_item1.png", alt="")
+							span.price 670 р.
+						.desc
+							.name Пицца для мальчиков (с мясом)
+							.size
+								.minus
+								input.number(type="text" value="1" name="amount[1]")
+								.plus
+				.order-detail
+					.sum
+						| Сумма заказа:
+						big 1090 
+						| руб.
+					.notice.colored Минимальная сумма заказа - 600 руб.
+				
+				h1 УКАЖИТЕ КОНТАКТНУЮ ИНФОРМАЦИЮ
+				.form-data
+					.form-field.phone.error
+						label
+							| Выш мобильный телефон *:
+							input.mask-phone(type="text" name="phone")
+							
+					.form-field.name
+						label
+							| Представьтесь пожалуйста:
+							input(type="text" name="name")
+							
+					.form-group
+						.form-field.street
+							label
+								| Улица:
+								input(type="text" name="street")
+						.form-field.house
+							label
+								| № дома:
+								input(type="text" name="house")
+						.form-field.office
+							label
+								| № квартиры/офиса:
+								input(type="text" name="office")
+								
+					.form-field.intercom
+						label Домофон:
+						
+						input(type="radio" checked="checked" name="intercom" id="intercom_none" value="0")
+						label.radio(for="intercom_none") Нет
+						
+						input(type="radio" name="intercom" id="intercom_work" value="1")
+						label.radio(for="intercom_work") Работает
+						
+						input(type="radio" name="intercom" id="intercom_break" value="2")
+						label.radio(for="intercom_break") Не работает
+							
+					.form-field.persons
+						label
+							| Количество персон:
+							input.number(type="text" name="persons")
+							
+					.form-field.more
+						label
+							| Дополнительные пожелания:
+							textarea(name="more", cols="30", rows="10")
+							
+					.form-field.pay
+						input(type="radio" id="pay-cash" name="pay" value="1" checked="checked") 
+						label.radio.stack(for="pay-cash") Курьеру наличными
+						
+						input(type="radio" id="pay-card" name="pay" value="2") 
+						label.radio.stack(for="pay-card") Курьеру картой VISA или MasterCard
+					
+					input(type="submit" value="ОТПРАВИТЬ ЗАКАЗ")

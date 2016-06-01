@@ -1,0 +1,152 @@
+section.range {
+    .set-group {
+        margin: 0 10px;
+        text-align: center;
+
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+
+        .set-item {
+            margin: 10px 10px 35px;
+            display: inline-block;
+            min-width: 255px; max-width: 300px;
+            width: calc(50% - 20px);
+            background-color: white;
+            text-align: center;
+            vertical-align: top;
+            position: relative;
+
+            .img-wrap {
+                position: relative;
+                img {
+                    max-width: 100%;
+                }
+                .price {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: inline-block;
+                    min-width: 115px;
+                    height: 40px;
+                    background-color: rgba(#fcaa3a, .7);
+                    text-align: center;
+                    line-height: 40px;
+                    color: #e55e4a;
+                    font-size: 27px;
+                    font-weight: 700;
+                }
+            }
+
+            .desc-wrap {
+                .title {
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+
+                .nutrition {
+                    position: relative;
+                    margin: 8px 0;
+                    padding: 10px 15px;
+                    border-top: 1px solid #c8c8c8;
+                    border-bottom: 1px solid #c8c8c8;
+                    font-size: 16px;
+
+                    .nutr-bar {
+                        text-align: center;
+
+                        .item {
+                            margin: 0 5px;
+                        }
+                    }
+
+                    button.show-more {
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        top: 6px;
+                        right: 8px;
+                        margin: 0;
+                        background: url('/img/arrow_down.png') no-repeat center;
+                        background-size: 18px 10px;
+                        outline: none;
+
+                        // активна кнопка
+                        &:active,
+                        &:focus,
+                        &:hover {
+                            transform: rotate(180deg);
+
+                            & + .more {
+                                transform: scaleY(1);
+                                height: auto;
+                                margin-top: 10px;
+                                padding: 10px 0 0;
+                            }
+                        }
+                    }
+
+                    .more {
+                        color: #7C7C7C;
+                        font-size: 16px;
+                        overflow: hidden;
+                        height: 0;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        border-top: 1px dashed #c8c8c8;
+                        transition: all .2s ease;
+                    }
+                }
+
+                .desc {
+                    padding: 18px;
+                    text-align: left;
+                }
+            }
+            button.to-cart {
+                position: relative;
+                top: 25px;
+                margin: -25px auto 0;
+                text-transform: uppercase;
+                background-color: #fcaa3a;
+
+                &:hover, &:active, &:focus {
+                    background: darken(#fcaa3a ,10%);
+                }
+            }
+        }
+    }
+}
+
+&.theme-2 {
+    section.range {
+        .second-menu {
+            background-color: #fffbf5;
+
+            ul li.active a {
+                color: #ed1c24;;
+            }
+        }
+
+        .set-group {
+            .set-item {
+                .img-wrap {
+                    .price {
+                        background-color: rgba(black, .15);
+                        color: #ed1c24;
+                    }
+                }
+
+                button.to-cart {
+                    background-color: #24cf5f;
+                    &:hover, &:active, &:focus {
+                        background: darken(#24cf5f ,10%);
+                    }
+                }
+            }
+        }
+    }
+}

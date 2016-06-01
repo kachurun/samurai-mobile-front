@@ -1,0 +1,90 @@
+.modal-overlay
+    // ланчи
+    .modal#lunch
+        .modal-content
+            a.close
+            .title Выбор блюда
+            section.lunch
+                .consist-select.wide
+                    .items                        
+                        each n in [1,3,2,4,1]
+                            a.item(href="" class=(n==2) ? "active":"")
+                                .img-wrap
+                                    img(src="/img/set_item" + n + ".png", alt="")
+                                    
+                                .desc
+                                    .title Монтана
+                                    .text Ролл с копченой курицей, сыром Фета, свежим огурчиком, ображенный в сухарях
+    // карта
+    .modal#address
+        .modal-content
+            a.close
+            .title Как проехать в сытый самурай
+            section.address.text-content
+                .content
+                    p Адрес: 620000 г. Екатеринбург, ул. Титова, д. 1
+
+                    p Телефон: (343) 237-222-7
+
+                    p На общественном транспорте:
+                    
+                    ul.list.dc
+                        li Маршрутное такси: 016, 018, 019, 024, 042, 077
+
+                        li Трамвай: 1, 9, 14, 15, 25, 27, 34
+
+                        li Автобус: 12, 42
+                .map#yamap
+                        
+    // коллбэк
+    .modal#callback
+        .modal-content
+            a.close
+            .title Заказ обратного звонка
+            section.text-content
+                form(action="")
+                    .form-data
+                        .form-field
+                            label Ваш мобильный телефон:
+                            input.mask-phone(type="text")
+                        input(type="submit" value="Заказать")
+    
+    // вход
+    .modal#signin
+        .modal-content
+            a.close
+            .title Вход в личный кабинет
+            section.text-content
+                form(action="")
+                    .form-data
+                        .form-field.phone
+                            label Телефон:
+                            input.mask-phone(type="text")
+                            
+                        .form-field.password
+                            label Пароль:
+                            input(type="password")
+                            
+                        input.sign(type="submit" value="Войти")
+                        a.und(href="") Забыли пароль?
+                        
+                    
+    // регистрация
+    .modal#signup
+        .modal-content
+            a.close
+            .title Регистрация
+            section.text-content
+                form(action="")
+                    .form-data
+                        .form-field.phone
+                            label Телефон:
+                            input.mask-phone(type="text")
+                            
+                        .form-field.mail
+                            label Почта:
+                            input(type="text")
+                            
+                        input.sign(type="submit" value="Получить доступ")
+                        
+                    

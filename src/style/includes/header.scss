@@ -1,0 +1,212 @@
+header {
+    background-color: $main_color;
+    width: 100%;
+    letter-spacing: -1em;
+    display: table;
+
+    .wrapper {
+        padding:  15px 0;
+    }
+    .logo,
+    .text,
+    .buttons-holder {
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: normal;
+    }
+
+    .logo {
+        padding-left: 20px;
+        width: 156px;
+        height: 138px;
+        background: url('/img/logo.png') no-repeat center;
+    }
+
+    .text {
+        padding: 0 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+        width: calc(100% - 246px - 156px);
+    }
+
+    .buttons-holder {
+        width: 246px;
+        text-align: right;
+        float: right;
+        margin-top: 10px;
+
+        .phone {
+            color: white;
+            font-size: 36px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 20px;
+            margin-right: 25px;
+
+            .code {
+                font-size: 18px;
+                font-weight: 300;
+                margin-right: 3px;
+            }
+        }
+
+        .buttons {
+            padding: 4px 25px 4px 6px;
+            border-radius: 26px 0 0 26px;
+            background: #fff;
+            width: 246px;
+            display: inline-block;
+            text-align: justify;
+            -moz-text-align-last: justify;
+            text-align-last: justify;
+            text-justify: newspaper;
+            zoom: 1;
+            line-height: 0;
+            font-size: 1px;
+
+            &:after {
+                width: 100%;
+                height: 0px;
+                visibility: hidden;
+                overflow: hidden;
+                content: '';
+                display: inline-block;
+            }
+
+            li {
+                display: inline-block;
+                line-height: normal;
+                font-size: 14px;
+                vertical-align: top;
+                width: 46px;
+                height: 46px;
+                a {
+                    background-image: url("/img/header_buttons.png");
+                    background-repeat: no-repeat;
+                    width: 46px;
+                    height: 46px;
+                    display: block;
+                    border-radius: 50%;
+
+                    &:hover, &:active, &:focus {
+                        background-color: #F7F7F7;
+                    }
+                }
+
+                .address {
+                    background-position: -83px 0;
+                }
+                .bucket {
+                    background-position: -165px 0;
+                }
+            }
+        }
+    }
+
+    // меню (бургеры, воки, супы, напитки)
+    .top-menu {
+        background-color: white;
+        letter-spacing: normal;
+
+        ul {
+            display: block;
+            letter-spacing: -1em;
+            list-style: none;
+            margin-bottom: -4px;
+
+            li {
+                letter-spacing: normal;
+                display: inline-block;
+                width: 16.66666667%;
+                min-width: 100px;
+                height: 100px;
+
+                &.active {
+                    background-color: #fcaa3a;
+                }
+
+                a {
+                    background-image: url('/img/top_menu.png');
+                    background-repeat: no-repeat;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    &:hover, &:focus, &:active {
+                        background-color: #e8dfce;
+                    }
+                }
+
+                &.sushi a { background-position: center 6px; }
+                &.wok a { background-position: center -88px; }
+                &.pizza a { background-position: center -176px; }
+                &.burger a { background-position: center -264px; }
+                &.drink a { background-position: center -354px; }
+                &.snack a { background-position: center -442px; }
+            }
+        }
+
+    }
+    .nav-panel {
+        letter-spacing: normal;
+        height: 48px;
+        background-color: $main_color;
+        padding: 5px 20px;
+
+        .section-name {
+            color: white;
+            font-size: 27px;
+            line-height: 38px;
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .burger-menu {
+            background: url('/img/burger_menu.png') no-repeat center;
+            width: 50px;
+            height: 100%;
+            float: left;
+            position: relative;
+            cursor: pointer;
+
+            select {
+                opacity: 0;
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+// коричневая тема
+.theme-2 header {
+    background-color: $second_color;
+
+    .logo {
+        background: url('/img/logo_2.png') no-repeat center;
+    }
+
+    .text {
+        color: #414141;
+    }
+
+    .buttons-holder {
+        .phone {
+            color: #ed1c24;
+        }
+    }
+    .nav-panel {
+        background-color: $second_color;
+
+        .section-name {
+            color: #414141;
+        }
+
+        .burger-menu {
+            background: url('/img/burger_menu_2.png') no-repeat center;
+        }
+    }
+}

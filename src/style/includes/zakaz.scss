@@ -1,0 +1,185 @@
+section.zakaz {
+
+    .container {
+        padding: 25px;
+    }
+    .order-list {
+
+        .order-item {
+            display: table;
+            width: 100%;
+            max-width: 740px;
+            position: relative;
+            background-color: $main_color;
+            color: white;
+            margin: 0 auto 25px;
+
+            .remove-item {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: url('/img/close.png') no-repeat center;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            .img-wrap {
+                position: relative;
+                width: 300px;
+                float: left;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .price {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: inline-block;
+                    min-width: 115px;
+                    height: 40px;
+                    background-color: rgba(#fcaa3a, .7);
+                    text-align: center;
+                    line-height: 40px;
+                    color: #e55e4a;
+                    font-size: 27px;
+                    font-weight: 700;
+                }
+            }
+
+            .desc {
+                position: relative;
+                padding: 10px 50px 20px 25px;
+                display: table-cell;
+                width: 100%;
+                vertical-align: top;
+
+                .name {
+                    font-size: 18px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    line-height: 1.2em;
+                    min-height: 4.8em;
+                }
+
+                .size {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0;
+                    width: 100%;
+                    height: 85px;
+                    line-height: 85px;
+                    text-align: center;
+
+                    input {
+                        margin: 0 auto;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 65px;
+                        height: 38px;
+                        text-align: center;
+                        background-color: white;
+                        border: 1px solid #b79c83;
+                        border-radius: 2px;
+                        margin: 0 30px;
+                    }
+
+                    .minus, .plus {
+                        width: 80px;
+                        height: 80px;
+                        line-height: 80px;
+                        text-align: center;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-color: #fcaa3a;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-image: url('/img/amount.png');
+                        background-repeat: no-repeat;
+
+                        &:hover, &:focus, &:active {
+                            background-color: lighten(#fcaa3a, 20%);
+                        }
+
+                    }
+
+                    .minus {
+                        background-position: 24px 22px;
+                    }
+
+                    .plus {
+                        background-position: -198px 22px;
+                    }
+
+                    @media screen and (max-width: 660px) {
+
+                        input {
+                            margin: 0 10px;
+                        }
+                        .minus, .plus {
+                            width: 55px;
+                            height: 55px;
+                        }
+                        .minus {
+                            background-position: 11px 10px;
+                        }
+                        .plus {
+                            background-position: -210px 9px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .order-detail {
+        background-color: white;
+        border-top: 2px solid #C7C7C7;
+        padding: 15px 25px 25px;
+        margin: 0 auto 25px;
+        max-width: 740px;
+        text-align: right;
+
+        .sum {
+            color: #131313;
+            font-weight: 400;
+            font-size: 27px;
+            margin-bottom: 15px;
+
+            .big {
+                font-size: 44px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .form-data {
+        max-width: 740px;
+        padding: 25px;
+        background-color: white;
+        margin: 0 auto;
+
+        .form-field {
+            &.intercom,
+            &.pay,
+            &.more {
+                width: 100%;
+            }
+
+            &.persons {
+                width: 200px;
+            }
+
+            &.pay {
+                label {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

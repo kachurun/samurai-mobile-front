@@ -1,0 +1,56 @@
+body.blur {
+    header, footer, section {
+        filter: blur(3px);
+    }
+}
+
+.side-menu {
+    position: fixed;
+    top:0;
+    left: 0%;
+    width: 65%;
+    width: 65vw;
+    max-width: 330px;
+    min-width: 260px;
+    height: 100%;
+    height: 100vh;
+
+    background: $main_color;
+    color: white;
+    padding: 80px 0 0;
+    overflow-y: auto;
+
+    z-index: 999;
+
+    transform: translateX(-100%);
+
+    transition: all 250ms ease;
+
+    &.show {
+        transform: translateX(0);
+        box-shadow: 10px 0 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+        width: 136px;
+        display: block;
+        margin: 0 auto;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .menu-items {
+        padding: 60px 0 30px 40px;
+        list-style: none;
+        text-transform: uppercase;
+
+        li {
+            margin: 0 0 15px;
+            padding: 15px 0 0;
+            border-bottom: 2px solid white;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+section.start-page {
+
+    #mainpage-slider {
+        img {
+            width: 100%;
+        }
+    }
+
+    .lSSlideOuter {
+        position: relative;
+        .lSPager.lSpg {
+            position: absolute;
+            bottom: 15px;
+            left: 30px;
+            z-index: 99;
+
+            &>li {
+                position: relative;
+                width: 16px !important;
+                height: 16px !important;
+                padding: 0 !important;
+                text-align: center;
+                border-radius: 50%;
+                margin-right: 2px;
+                border: 1px solid transparent;
+
+                a {
+                    position: absolute;
+                    background-color: #693300 !important;
+                    top: 3px;
+                    left: 3px;
+                }
+            }
+            &>li.active {
+                background: white;
+                border-color: black;
+                a {
+                    background-color: #ed1c24 !important;
+                }
+            }
+        }
+    }
+
+    .set-group {
+        margin: 0 10px;
+        text-align: center;
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+
+        &.items3 {
+            .set-item {
+                min-width: 164px; max-width: 270px;
+                width: calc(33% - 20px);
+            }
+        }
+        .set-item {
+            margin: 10px;
+            display: inline-block;
+            min-width: 255px; max-width: 300px;
+            width: calc(50% - 20px);
+            background-color: white;
+            text-align: center;
+            vertical-align: top;
+
+            .img-wrap {
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .desc-wrap {
+                width: 100%;
+                min-height: 75px;
+                display: table;
+
+                .title {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: $main_color;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                }
+            }
+
+            &:hover, &:active, &:focus {
+                .desc-wrap .title {
+                    color: darken($main_color, 20%);
+                }
+            }
+
+        }
+    }
+
+    .stocks {
+        background-color: white;
+        padding: 20px 20px 0;
+
+        .stocks-list {
+            letter-spacing: -1em;
+
+            .stock-item {
+                letter-spacing: normal;
+                display: inline-block;
+                max-width: 50%;
+                min-width: 250px;
+                vertical-align: top;
+                margin-bottom: 30px;
+
+                .img-wrap,
+                .text-wrap {
+                    display: table-cell;
+                    vertical-align: top;
+                }
+                .img-wrap {
+                    width: 60px;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .text-wrap {
+                    padding-right: 25px;
+                    padding-left: 10px;
+                }
+
+            }
+        }
+    }
+
+    .about {
+        padding: 20px 20px 0;
+    }
+}

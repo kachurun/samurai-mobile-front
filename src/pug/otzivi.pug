@@ -1,0 +1,41 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.text-content.flamp
+		.content
+			h1.thin 
+				| Следите за отзывами о нас на Flamp.ru, оставляйте
+				| свои и получайте бонусы на личный счет: 
+				a.link(href="#") подробнее об акции →
+			
+			.flamp-wrap
+				.title
+					span.text Отзывы о нас на Флампе
+					span.rating.star5 723
+				
+				.items
+					each i in [1,2,3]
+						.item
+							.img-wrap
+								.avatar
+									img(src="/img/flamp_ava.png", alt="")
+									span.rating.star5
+							.text
+								.name 
+									a.link(href="") Elizabet Arnikova
+									.crone 23,3
+								.desc
+									| Очень люблю ваши роллы. Но сегодня хочу отзыв оставить 
+									| о работе Вашего сайта. Пыталась оформить заказ на сайте -
+									| не получилось. 1....  
+									a.link(href="") Читать целиком →
+				.more
+					a.link.extend(href="#") Читать все отзывы (723)
+				
+				

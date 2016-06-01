@@ -1,0 +1,46 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.lunch
+		.container
+			.content
+				p Мы доставляем бизнес-ланчи с 
+					b понедельника по четверг с 12:00 до 16:00
+				.kind-select
+					.items
+						h5.colored Выберите один из трех видов бизнес ланчей
+						
+						a(href="" data-modal="lunch").item
+							span Бизнес ланч №1, 260 рублей
+						a(href="" data-modal="signin").item
+							span Бизнес ланч №2, 210 рублей
+						a(href="" data-modal="signup").item
+							span Бизнес ланч №3, 170 рублей
+					
+				.consist-select
+					.items
+						h5.colored Выберите состав
+						
+						a(href="").item
+							.img-wrap
+								img(src="/img/set_item1.png", alt="")
+								
+							.desc
+								.title Монтана
+								.text Ролл с копченой курицей, сыром Фета, свежим огурчиком, ображенный в сухарях
+								
+						a(href="").item
+							.img-wrap
+								img(src="/img/set_item3.png", alt="")
+								
+							.desc
+								.title Рис тепаньяки со свининой
+								.text Свинина обжаренная с рисом и овощами
+								
+				button.to-cart Добавить в заказ

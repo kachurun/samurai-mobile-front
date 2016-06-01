@@ -1,0 +1,39 @@
+extends ./includes/main.pug
+
+block title
+	title Сытый самурай
+
+block append head_scripts
+	script(src='./js/all.js')
+
+block content
+	section.admin
+		nav.second-menu
+			ul
+				-var group = ["История заказов", "Личные данные", "Бонусная карта"];
+				for name, index in group
+					li(class=(index == 2) ? "active" : "")
+						a(href='#')= name
+
+		.container
+			.content
+				h1.thin Бонусов на карте: 
+					span.colored.ubold 185
+				
+				.f-table
+					.f-thead
+						.f-th Дата и время заказа
+						.f-th Бонусами оплачено
+						.f-th Бонусов начисленно
+					.f-tr
+						.f-td 25 марта 2016
+						.f-td 1870
+						.f-td 185
+					.f-tr
+						.f-td 30 марта 2016
+						.f-td 0
+						.f-td 135
+					.f-tr
+						.f-td 5 мая 2016
+						.f-td 780
+						.f-td 76
